@@ -124,7 +124,10 @@ function App() {
 
         {/* Our Clients */}
         <section className={styles.clients}>
-          This is Our Clients
+          <h1>Our Clients</h1>
+          <div className={styles.clientImage}>
+            <img src="/img/clients.webp" alt="Our Clients" />
+          </div>
         </section>
       </section>
       <Footer />
