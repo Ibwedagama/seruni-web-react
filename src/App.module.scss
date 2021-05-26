@@ -3,7 +3,6 @@
   height: auto;
 
   .body {
-    
     .home,
     .ourServices,
     .ourWork,
@@ -17,7 +16,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: lightgray;
       padding-bottom: 1rem;
       .heroBanner {
         img {
@@ -46,21 +44,37 @@
     }
 
     .ourServices {
-      background: white;
+      background: transparent;
       display: flex;
       justify-content: center;
       .servicesGrid {
+        position: relative;
         width: 90%;
-        justify-content: center;
-        align-items: center;
+        place-items: center;
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 1rem;
 
+        .sectionIllustration {
+          position: relative;
+          max-width: 300px;
+          z-index: 1;
+          margin-top: -20%;
+          margin-bottom: -10%;
+          animation: bounce 1.3s ease-in-out alternate-reverse infinite;
+
+          left: -2rem;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
         .servicesCard {
           position: relative;
           transition: 0.3s ease-in;
-          img{
+          max-width: 400px;
+          img {
             width: 100%;
             height: auto;
           }
@@ -71,17 +85,17 @@
             left: 0;
             bottom: 0;
             right: 0;
-            padding-top: 2em;
+            padding-top: 2rem;
             padding-right: 1.5rem;
             padding-left: 1rem;
 
             h3 {
               color: white;
-              font-size: 700;
+              font-weight: 700;
               margin-bottom: 0.8rem;
             }
 
-            p{
+            p {
               line-height: 160%;
               color: white;
               font-size: 0.8rem;
@@ -113,7 +127,7 @@
       .ourServices,
       .ourWork,
       .clients {
-        padding: 3rem 12%;
+        padding: 3rem 8%;
       }
 
       .home {
@@ -133,6 +147,89 @@
           }
         }
       }
+
+      .ourServices {
+        .servicesGrid {
+          width: 100%;
+          max-width: 1100px;
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 15%;
+          row-gap: 3rem;
+
+          .sectionIllustration {
+            pointer-events: none;
+            position: absolute;
+            display: grid;
+            place-items: center;
+            max-width: 100%;
+            top: 0;
+            left: -2rem;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            img {
+              max-width: 350px;
+            }
+          }
+
+          .servicesCard {
+            position: relative;
+            transition: 0.3s ease-in;
+            img {
+              width: 100%;
+              height: auto;
+            }
+
+            .cardContent {
+              padding-top: 10%;
+              padding-right: 2.5rem;
+              padding-left: 2rem;
+
+              h3 {
+                font-size: 1rem;
+                color: white;
+                font-weight: 700;
+                margin-bottom: 1rem;
+              }
+
+              p {
+                line-height: 160%;
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+      }
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .App {
+    .body {
+      .ourServices {
+        .servicesGrid {
+          .servicesCard {
+            .cardContent {
+              h3 {
+                font-size: 1.2rem;
+              }
+              p {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 30px, 0);
   }
 }

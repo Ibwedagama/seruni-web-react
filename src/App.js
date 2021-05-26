@@ -20,7 +20,12 @@ function App() {
     <div className={styles.App}>
       <Navbar toggleSidebar={handleToggleSidebar} />
       <Sidebar closeSidebar={closeSidebar} isSidebarOpen={sidebar} />
-      <section className={styles.body}>
+      <section
+        className={styles.body}
+        style={{
+          backgroundImage: "url(/img/BG_Yellow.png)",
+          backgroundSize: "cover",
+        }}>
 
         {/* Home Section */}
         <section className={styles.home} id="home">
@@ -42,8 +47,8 @@ function App() {
 
         {/* Our Services */}
         <section className={styles.ourServices} id="our-services">
-
           <section className={styles.servicesGrid}>
+
             {/* Creative Content */}
             <figure className={styles.servicesCard}>
               <img src="/img/windows_bar_green.png" alt="Creative Content" />
@@ -72,6 +77,11 @@ function App() {
             </figure>
 
             {/* Digital Campaign */}
+            <figure className={styles.sectionIllustration}>
+              <img src="/img/person_image.webp" alt="Our Service Mobile Illustration" />
+            </figure>
+
+            {/* Digital Campaign */}
             <figure className={styles.servicesCard}>
               <img src="/img/windows_bar_red.png" alt="Digital Campaign" />
               <figcaption className={styles.cardContent}>
@@ -97,8 +107,6 @@ function App() {
                 </p>
               </figcaption>
             </figure>
-
-
           </section>
         </section>
 
