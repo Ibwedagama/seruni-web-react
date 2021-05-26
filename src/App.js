@@ -22,13 +22,14 @@ function App() {
       <Sidebar closeSidebar={closeSidebar} isSidebarOpen={sidebar} />
       <section
         className={styles.body}
-        style={{
-          backgroundImage: "url(/img/BG_Yellow.png)",
-          backgroundSize: "cover",
-        }}>
+      >
 
         {/* Home Section */}
-        <section className={styles.home} id="home">
+        <section className={styles.home} id="home"
+          style={{
+            backgroundImage: "url(/img/BG_Yellow.png)",
+            backgroundSize: "cover",
+          }}>
           <div className={styles.heroBanner}>
             <img src="/img/seruni-sticker.webp" alt="Seruni Banner Sticker" />
           </div>
@@ -47,6 +48,12 @@ function App() {
 
         {/* Our Services */}
         <section className={styles.ourServices} id="our-services">
+          <section className={styles.textureOverlay}
+            style={{
+              backgroundImage: "url(/img/BG_Transparent.webp)",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat"
+            }} />
           <section className={styles.servicesGrid}>
 
             {/* Creative Content */}
