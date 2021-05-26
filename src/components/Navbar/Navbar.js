@@ -21,7 +21,7 @@ const Navbar = ({ toggleSidebar }) => {
         </Link>
         <Link
           activeClass="active"
-          to="about-us"
+          to="our-services"
           spy={true}
           smooth={true}
           offset={0}
