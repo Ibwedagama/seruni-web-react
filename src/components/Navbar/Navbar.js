@@ -1,11 +1,37 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import styles from './Navbar.module.scss'
 import { Link } from "react-scroll"
 import { HiMenu } from "react-icons/hi"
 
 const Navbar = ({ toggleSidebar }) => {
+
+  const beforePosition = useRef(0)
+  const navbarRef = useRef()
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => handleUserScroll())
+    return () => {
+      window.removeEventListener('scroll', () => handleUserScroll())
+    }
+  }, [])
+
+  const handleUserScroll = () => {
+    if (window.scrollY === 0) {
+      navbarRef.current.classList.remove('scrolled')
+      navbarRef.current.classList.remove('show')
+    }
+    else if ((document.body.getBoundingClientRect()).top > beforePosition.current) {
+      navbarRef.current.classList.add(`show`)
+      navbarRef.current.classList.remove('scrolled')
+    }
+    else {
+      navbarRef.current.classList.remove('show')
+      navbarRef.current.classList.add('scrolled')
+    }
+    beforePosition.current = (document.body.getBoundingClientRect()).top
+  }
   return (
-    <header className={styles.navbar} id="navbar">
+    <header className={styles.navbar} ref={navbarRef}>
 
       {/* Dekstop Navbar */}
       <nav className={styles.navDesktop}>

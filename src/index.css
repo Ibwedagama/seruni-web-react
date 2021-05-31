@@ -15,6 +15,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+header.scrolled {
+  top: -100%;
+}
+
+header.show {
+  top: 0;
+  background: #eebc25;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+}
+
 .slide {
   opacity: 0;
   transition: 350ms ease-in;
@@ -23,3 +33,4 @@ body {
 .slide.active {
   opacity: 1;
 }
+

@@ -299,8 +299,6 @@
           }
         }
       }
-
-
     }
   }
 }
@@ -314,6 +312,11 @@
       .clients {
         padding: 3rem 15%;
       }
+
+      .home {
+        padding-top: 6rem;
+      }
+
       .ourServices {
         .servicesGrid {
           .servicesCard {
@@ -325,6 +328,7 @@
           }
         }
       }
+
       .clients {
         .clientImage {
           img {
@@ -334,6 +338,7 @@
           }
         }
       }
+      
       .ourWork {
         h1 {
           font-size: 7rem;
