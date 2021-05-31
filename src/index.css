@@ -14,3 +14,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.slide {
+  opacity: 0;
+  transition: 350ms ease-in;
+}
+
+.slide.active {
+  opacity: 1;
+}

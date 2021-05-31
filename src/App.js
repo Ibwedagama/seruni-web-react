@@ -2,6 +2,7 @@ import styles from './App.module.scss'
 import Navbar from './components/Navbar/Navbar'
 import Sidebar from './components/Sidebar/Sidebar'
 import Footer from './components/Footer/Footer'
+import ImageSlider from './components/ImageSlider/ImageSlider'
 
 import { useState } from 'react'
 
@@ -119,7 +120,8 @@ function App() {
 
         {/* Our Work */}
         <section className={styles.ourWork} id="our-work">
-          This is Our Work
+          <h1>Case Studies</h1>
+          <ImageSlider />
         </section>
 
         {/* Our Clients */}

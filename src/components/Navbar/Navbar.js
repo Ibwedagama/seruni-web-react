@@ -5,7 +5,7 @@ import { HiMenu } from "react-icons/hi"
 
 const Navbar = ({ toggleSidebar }) => {
   return (
-    <header className={styles.navbar}>
+    <header className={styles.navbar} id="navbar">
 
       {/* Dekstop Navbar */}
       <nav className={styles.navDesktop}>
