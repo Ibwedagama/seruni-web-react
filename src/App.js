@@ -52,8 +52,9 @@ function App() {
           <section className={styles.textureOverlay}
             style={{
               backgroundImage: "url(/img/BG_Transparent.webp)",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat"
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center"
             }} />
           <section className={styles.servicesGrid}>
 
