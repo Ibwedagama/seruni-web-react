@@ -11,7 +11,7 @@ const Footer = () => {
       <div className={styles.footerForm}>
         <form>
           <div className={styles.inputGroup}>
-            <select name="type" id="type">
+            <select name="type" id="type" required>
               <option value="Client Inquiries">Client Inquiries</option>
               <option value="Job Application">Job Application</option>
               <option value="Collaboration Request">Collaboration Request</option>
@@ -19,16 +19,16 @@ const Footer = () => {
           </div>
           <div className={styles.twoColumn}>
             <div className={styles.inputGroup}>
-              <input type="text" name="name" id="name" placeholder="Name*" />
+              <input type="text" name="name" id="name" placeholder="Name*" required />
             </div>
             <div className={styles.inputGroup}>
-              <input type="text" name="company" id="company" placeholder="Company Name*" />
+              <input type="text" name="company" id="company" placeholder="Company Name*" required />
             </div>
             <div className={styles.inputGroup}>
-              <input type="email" name="email" id="email" placeholder="Email*" />
+              <input type="email" name="email" id="email" placeholder="Email*" required />
             </div>
             <div className={styles.inputGroup}>
-              <input type="tel" name="phone" id="phone" placeholder="Phone*" />
+              <input type="tel" name="phone" id="phone" placeholder="Phone*" required />
             </div>
           </div>
           <div className={styles.inputGroup}>
@@ -44,9 +44,9 @@ const Footer = () => {
         <p className={styles.subtitle}>or pop us a visit at :</p>
 
         <div className={styles.socialMedia}>
-          <a href="/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
-          <a href="/" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-          <a href="/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+          <a href="https://www.linkedin.com/company/seruni/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
+          <a href="https://www.facebook.com/serunicreative/" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+          <a href="https://www.instagram.com/serunicreative/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
         </div>
 
         <p className={styles.copywrite}>Brings You Joy | &copy; 2020 Seruni</p>
