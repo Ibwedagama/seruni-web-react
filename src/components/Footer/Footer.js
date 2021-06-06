@@ -114,7 +114,7 @@ const Footer = () => {
               value={formData.message} />
           </div>
 
-          <button className={styles.formButton} type="submit">Send!</button>
+          <button className={styles.formButton} name="send" title="send" type="submit">Send!</button>
         </form>
       </div>
       <div className={styles.footerInfo}>
@@ -123,9 +123,9 @@ const Footer = () => {
         <p className={styles.subtitle}>or pop us a visit at :</p>
 
         <div className={styles.socialMedia}>
-          <a href="https://www.linkedin.com/company/seruni/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
-          <a href="https://www.facebook.com/serunicreative/" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-          <a href="https://www.instagram.com/serunicreative/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+          <a href="https://www.linkedin.com/company/seruni/" target="_blank" rel="noopener noreferrer" name="linked-in"><FaLinkedinIn /></a>
+          <a href="https://www.facebook.com/serunicreative/" target="_blank" rel="noopener noreferrer" name="facebook"><FaFacebookF /></a>
+          <a href="https://www.instagram.com/serunicreative/" target="_blank" rel="noopener noreferrer" name="instagram"><FaInstagram /></a>
         </div>
 
         <p className={styles.copywrite}>Brings You Joy | &copy; 2020 Seruni</p>

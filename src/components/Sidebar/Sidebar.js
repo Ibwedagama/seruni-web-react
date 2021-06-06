@@ -7,7 +7,7 @@ const Sidebar = ({closeSidebar, isSidebarOpen}) => {
   return (
     <section className={isSidebarOpen ? `${styles.sidebar} ${styles.open}` : styles.sidebar}>
       <div className={styles.sidebarHeader}>
-        <button>
+        <button name="close-sidebar" title="close-sidebar">
           <HiX className={styles.closeIcon} onClick={closeSidebar}/>
         </button>
       </div>
@@ -20,6 +20,7 @@ const Sidebar = ({closeSidebar, isSidebarOpen}) => {
           offset={0}
           duration={500}
           onClick={closeSidebar}
+          name="sidebar-home"
         >
           Home
         </Link>
@@ -31,6 +32,7 @@ const Sidebar = ({closeSidebar, isSidebarOpen}) => {
           offset={0}
           duration={500}
           onClick={closeSidebar}
+          name="sidebar-about-us"
         >
           About Us
         </Link>
@@ -42,6 +44,7 @@ const Sidebar = ({closeSidebar, isSidebarOpen}) => {
           offset={0}
           duration={500}
           onClick={closeSidebar}
+          name="sidebar-our-work"
         >
           Our Work
         </Link>
@@ -53,6 +56,7 @@ const Sidebar = ({closeSidebar, isSidebarOpen}) => {
           offset={0}
           duration={500}
           onClick={closeSidebar}
+          name="sidebar-contact-us"
         >
           Contact Us
         </Link>

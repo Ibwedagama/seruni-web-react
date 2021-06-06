@@ -42,6 +42,7 @@ const Navbar = ({ toggleSidebar }) => {
           smooth={true}
           offset={0}
           duration={500}
+          name="home"
         >
           Home
         </Link>
@@ -52,6 +53,7 @@ const Navbar = ({ toggleSidebar }) => {
           smooth={true}
           offset={0}
           duration={500}
+          name="about-us"
         >
           About Us
         </Link>
@@ -62,6 +64,7 @@ const Navbar = ({ toggleSidebar }) => {
           smooth={true}
           offset={0}
           duration={500}
+          name="seruni-logo"
         >
           <img src="/img/logo_seruni.png" alt="Seruni Logo" />
         </Link>
@@ -72,6 +75,7 @@ const Navbar = ({ toggleSidebar }) => {
           smooth={true}
           offset={0}
           duration={500}
+          name="our-work"
         >
           Our Work
         </Link>
@@ -82,6 +86,7 @@ const Navbar = ({ toggleSidebar }) => {
           smooth={true}
           offset={0}
           duration={500}
+          name="contact-us"
         >
           Contact Us
         </Link>
@@ -90,7 +95,7 @@ const Navbar = ({ toggleSidebar }) => {
       {/* Mobile Navbar */}
       <nav className={styles.navMobile}>
         <div className={styles.hamburgerMenu} >
-          <button>
+          <button name="hamburger-menu" title="hamburger-menu">
             <HiMenu onClick={toggleSidebar} />
           </button>
         </div>
@@ -101,6 +106,7 @@ const Navbar = ({ toggleSidebar }) => {
           smooth={true}
           offset={0}
           duration={500}
+          name="seruni-logo-mobile"
         >
           <img src="/img/logo_seruni.png" alt="Seruni Logo" />
         </Link>
