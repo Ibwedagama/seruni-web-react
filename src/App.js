@@ -5,6 +5,9 @@ import Footer from './components/Footer/Footer'
 import ImageSlider from './components/ImageSlider/ImageSlider'
 
 import { useState } from 'react'
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-1229204270-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
   const [sidebar, setSidebar] = useState(false)
